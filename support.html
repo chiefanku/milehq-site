@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — Milehq</title>
+<meta name="description" content="Help and contact for Milehq, the private automatic mileage tracker for iPhone.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="logo">M</div>
+  <div class="brand"><a href="index.html">Milehq</a></div>
+</header>
+
+<main class="wrap">
+  <h1>Support</h1>
+  <p class="lede">Email <a href="mailto:chief@hbadgerlabs.com">chief@hbadgerlabs.com</a> and a human will get back to
+  you, usually within one business day.</p>
+
+  <div class="card">
+    <p style="margin:0"><strong>Reporting a tracking problem?</strong> Please include your iPhone model, iOS version,
+    the date and rough time of the drive, and what you expected versus what Milehq recorded. Since trip data stays on
+    your device, we can't look it up — your description is what we work from.</p>
+  </div>
+
+  <h2>Common questions</h2>
+
+  <h3>Drives aren't detected automatically</h3>
+  <p>Automatic detection needs <strong>Always</strong> location access. Open iOS Settings → Privacy &amp; Security →
+  Location Services → Milehq and choose <em>Always</em>, with Precise Location on. Also enable Motion &amp; Fitness,
+  which is how Milehq tells driving apart from walking. Then confirm "Automatic drive detection" is on in the app's
+  Settings tab. Detection starts a few minutes into a drive by design — it waits until it is confident you are
+  actually driving rather than walking, so short trips under about a quarter mile may not register.</p>
+
+  <h3>Does it drain my battery?</h3>
+  <p>GPS runs only during an actual drive. The rest of the time Milehq uses the iPhone's low-power significant-location
+  and visit monitoring, which costs very little. When you park, Milehq waits five minutes, finalizes the trip, and
+  powers GPS back down.</p>
+
+  <h3>A trip's distance looks wrong</h3>
+  <p>Open the trip and edit the mileage. Edited trips are flagged with an asterisk on exports and hand-entered trips
+  with <code>[M]</code>, so your log stays honest if it is ever examined. Tunnels, parking garages, and long stretches
+  without signal can shorten a recorded route; the edit exists for exactly that.</p>
+
+  <h3>How do I get my data out?</h3>
+  <p>Reports tab → choose a period → Export CSV or Export PDF. Both are free and unlimited. The PDF includes every
+  IRS-required field, per-category totals, audit flags, and a SHA-256 integrity digest. You can share either one
+  straight to your accountant.</p>
+
+  <h3>What mileage rate does it use?</h3>
+  <p>The 2026 IRS standard rates by default: 72.5¢ per business mile, 21¢ medical, 14¢ charity. You can change any of
+  them in the Settings tab if you need different figures.</p>
+
+  <h3>Can I use it with CarPlay?</h3>
+  <p>Yes. Plug in your iPhone and Milehq appears on the car screen, where you can start and end drives, see the day's
+  totals, and classify recent trips. Siri also works hands-free: "Start a drive in Milehq."</p>
+
+  <h3>Where is my data stored? Can I sync it?</h3>
+  <p>Everything is stored only on your iPhone — there is no account and no cloud copy, which is why nobody but you can
+  read it. That also means it does not sync between devices today, and deleting the app deletes your trips. Export a
+  CSV or PDF before deleting or switching phones if you want to keep your records.</p>
+
+  <h3>Deleting your data</h3>
+  <p>Swipe to delete individual trips in the Drives tab, or delete the app to remove everything at once. Nothing is
+  retained anywhere else, so no further request is needed.</p>
+
+  <h2>Contact</h2>
+  <p><a href="mailto:chief@hbadgerlabs.com">chief@hbadgerlabs.com</a><br>
+  Honey Badger Labs LLC</p>
+</main>
+
+<footer class="site">
+  <a href="index.html">Home</a> · <a href="privacy.html">Privacy</a> · <a href="support.html">Support</a>
+  <div style="margin-top:8px">© 2026 Honey Badger Labs LLC</div>
+</footer>
+
+</body>
+</html>
