@@ -28,8 +28,12 @@ CLOUDFLARE_ACCOUNT_ID="$ACCOUNT_ID" CI=1 \
     --project-name="$PROJECT" --branch=main --commit-dirty=true
 
 echo
-for path in "" privacy support; do
-  code=$(curl -sL -o /dev/null -w '%{http_code}' --max-time 20 \
-         "https://milehq.hbadgerlabs.com/$path")
-  printf '  /%-8s -> %s\n' "$path" "$code"
+# Both hosts serve this project. kiro.* is canonical; milehq.* is still the
+# hostname registered on the App Store listing and must keep answering until
+# that is repointed, so a break in either one is a problem.
+for host in kiro.hbadgerlabs.com milehq.hbadgerlabs.com; do
+  for path in "" privacy support; do
+    code=$(curl -sL -o /dev/null -w '%{http_code}' --max-time 20 "https://$host/$path")
+    printf '  %-24s /%-8s -> %s\n' "$host" "$path" "$code"
+  done
 done
